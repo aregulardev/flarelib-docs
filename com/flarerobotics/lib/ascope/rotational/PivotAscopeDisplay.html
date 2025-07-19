@@ -108,7 +108,7 @@ loadScripts(document, 'script');</script>
  double&nbsp;length,
  <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/function/Supplier.html" title="class or interface in java.util.function" class="external-link">Supplier</a>&lt;edu.wpi.first.math.geometry.Rotation3d&gt;&nbsp;angleSupplier)</code></div>
 <div class="col-last odd-row-color">
-<div class="block">Constructs a single-jointed new PivotAscopeDisplay.</div>
+<div class="block">Constructs a new single-jointed PivotAscopeDisplay.</div>
 </div>
 <div class="col-constructor-name even-row-color"><code><a href="#%3Cinit%3E(java.lang.String,java.util.function.Supplier,double,java.util.function.Supplier,java.util.function.Supplier)" class="member-name-link">PivotAscopeDisplay</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;name,
  <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/function/Supplier.html" title="class or interface in java.util.function" class="external-link">Supplier</a>&lt;edu.wpi.first.math.geometry.Pose3d&gt;&nbsp;basePose,
@@ -143,29 +143,34 @@ loadScripts(document, 'script');</script>
 <div class="block">Computes the final pose of the arm's end effector using forward kinematics.</div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>edu.wpi.first.math.geometry.Pose3d</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getJointPose(int)" class="member-name-link">getJointPose</a><wbr>(int&nbsp;joint)</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#computeEndEffectorPose(edu.wpi.first.math.geometry.Transform3d)" class="member-name-link">computeEndEffectorPose</a><wbr>(edu.wpi.first.math.geometry.Transform3d&nbsp;offset)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">Returns the pose of the specified joint (1-indexed).</div>
+<div class="block">Computes the final pose of the arm's end effector using forward kinematics.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>edu.wpi.first.math.geometry.Pose3d</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getJointPose(int,edu.wpi.first.math.geometry.Transform3d)" class="member-name-link">getJointPose</a><wbr>(int&nbsp;joint,
- edu.wpi.first.math.geometry.Transform3d&nbsp;offset)</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getJointPose(int)" class="member-name-link">getJointPose</a><wbr>(int&nbsp;joint)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Returns the pose of the specified joint (1-indexed).</div>
 </div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>edu.wpi.first.math.geometry.Pose3d</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getJointPose(int,edu.wpi.first.math.geometry.Transform3d)" class="member-name-link">getJointPose</a><wbr>(int&nbsp;joint,
+ edu.wpi.first.math.geometry.Transform3d&nbsp;offset)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Returns the pose of the specified joint (1-indexed).</div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#update()" class="member-name-link">update</a>()</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Updates the Network Table outputs.</div>
+</div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#update()" class="member-name-link">update</a>()</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#update(edu.wpi.first.math.geometry.Transform3d)" class="member-name-link">update</a><wbr>(edu.wpi.first.math.geometry.Transform3d&nbsp;offset)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Updates the Network Table outputs.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#update(edu.wpi.first.math.geometry.Transform3d)" class="member-name-link">update</a><wbr>(edu.wpi.first.math.geometry.Transform3d&nbsp;offset)</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#update(edu.wpi.first.math.geometry.Transform3d%5B%5D)" class="member-name-link">update</a><wbr>(edu.wpi.first.math.geometry.Transform3d[]&nbsp;offsets)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">Updates the Network Table outputs.</div>
-</div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#update(edu.wpi.first.math.geometry.Transform3d%5B%5D)" class="member-name-link">update</a><wbr>(edu.wpi.first.math.geometry.Transform3d[]&nbsp;offsets)</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Updates the Network Table outputs.</div>
 </div>
 </div>
@@ -198,10 +203,13 @@ loadScripts(document, 'script');</script>
 <dt>Parameters:</dt>
 <dd><code>name</code> - The name of the system.</dd>
 <dd><code>basePose</code> - The pose supplier for the root of the arm.</dd>
-<dd><code>segmentLengthsMeters</code> - The length of each joint.</dd>
+<dd><code>segmentLengthsMeters</code> - The length of each joint. Must have the same length as the joint
+                             angles and the extension supplier, and the joint count.</dd>
 <dd><code>jointAnglesRads</code> - The supplier for the joint angles, in radians.</dd>
 <dd><code>extensionSupplier</code> - The extensions supplier in meters, used for telescoping /
                              extending arms.</dd>
+<dt>Throws:</dt>
+<dd><code><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/IllegalArgumentException.html" title="class or interface in java.lang" class="external-link">IllegalArgumentException</a></code> - If the array lengths don't match.</dd>
 </dl>
 </section>
 </li>
@@ -222,6 +230,8 @@ loadScripts(document, 'script');</script>
 <dd><code>angleSupplier</code> - The supplier for the arm angle, in radians.</dd>
 <dd><code>extensionSupplier</code> - The extensions supplier in meters, used for telescoping / extending
                           arms.</dd>
+<dt>Throws:</dt>
+<dd><code><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/IllegalArgumentException.html" title="class or interface in java.lang" class="external-link">IllegalArgumentException</a></code> - If the array lengths don't match.</dd>
 </dl>
 </section>
 </li>
@@ -232,7 +242,7 @@ loadScripts(document, 'script');</script>
  <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/function/Supplier.html" title="class or interface in java.util.function" class="external-link">Supplier</a>&lt;edu.wpi.first.math.geometry.Pose3d&gt;&nbsp;basePose,
  double&nbsp;length,
  <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/function/Supplier.html" title="class or interface in java.util.function" class="external-link">Supplier</a>&lt;edu.wpi.first.math.geometry.Rotation3d&gt;&nbsp;angleSupplier)</span></div>
-<div class="block">Constructs a single-jointed new PivotAscopeDisplay.
+<div class="block">Constructs a new single-jointed PivotAscopeDisplay.
 
  <p>
  Note: Use length = 0 for pivot.</div>
@@ -259,6 +269,19 @@ loadScripts(document, 'script');</script>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">edu.wpi.first.math.geometry.Pose3d</span>&nbsp;<span class="element-name">computeEndEffectorPose</span>()</div>
 <div class="block">Computes the final pose of the arm's end effector using forward kinematics.</div>
 <dl class="notes">
+<dt>Returns:</dt>
+<dd>The pose of the end effector.</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="computeEndEffectorPose(edu.wpi.first.math.geometry.Transform3d)">
+<h3>computeEndEffectorPose</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">edu.wpi.first.math.geometry.Pose3d</span>&nbsp;<span class="element-name">computeEndEffectorPose</span><wbr><span class="parameters">(edu.wpi.first.math.geometry.Transform3d&nbsp;offset)</span></div>
+<div class="block">Computes the final pose of the arm's end effector using forward kinematics.</div>
+<dl class="notes">
+<dt>Parameters:</dt>
+<dd><code>offset</code> - The offset applied to the final position.</dd>
 <dt>Returns:</dt>
 <dd>The pose of the end effector.</dd>
 </dl>
