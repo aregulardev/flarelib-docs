@@ -116,30 +116,25 @@ loadScripts(document, 'script');</script>
 <div class="col-last even-row-color">
 <div class="block">The maximum noise in the roll (X axis rotation) for projectile visualization.</div>
 </div>
-<div class="col-first odd-row-color"><code>static <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;edu.wpi.first.math.geometry.Pose3d&gt;</code></div>
+<div class="col-first odd-row-color"><code>static <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="data/ProjectileTarget.html" title="class in com.flarerobotics.lib.control.shooter.data">ProjectileTarget</a>&gt;</code></div>
 <div class="col-second odd-row-color"><code><a href="#kProjectileTargets" class="member-name-link">kProjectileTargets</a></code></div>
 <div class="col-last odd-row-color">
-<div class="block">The list of targets' poses for the projectiles.</div>
-</div>
-<div class="col-first even-row-color"><code>static <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Double.html" title="class or interface in java.lang" class="external-link">Double</a>&gt;</code></div>
-<div class="col-second even-row-color"><code><a href="#kProjectileTargetTolerances" class="member-name-link">kProjectileTargetTolerances</a></code></div>
-<div class="col-last even-row-color">
-<div class="block">The list of targets' pose tolerances for the projectiles.</div>
-</div>
-<div class="col-first odd-row-color"><code>static double</code></div>
-<div class="col-second odd-row-color"><code><a href="#kTrajectoryMaxTime" class="member-name-link">kTrajectoryMaxTime</a></code></div>
-<div class="col-last odd-row-color">
-<div class="block">The maximum time-of-flight to simulate for a given object.</div>
+<div class="block">The list of projectile targets to use for trajectory visualization.</div>
 </div>
 <div class="col-first even-row-color"><code>static double</code></div>
-<div class="col-second even-row-color"><code><a href="#kVelocityEpsilon" class="member-name-link">kVelocityEpsilon</a></code></div>
+<div class="col-second even-row-color"><code><a href="#kTrajectoryMaxTime" class="member-name-link">kTrajectoryMaxTime</a></code></div>
 <div class="col-last even-row-color">
+<div class="block">The maximum time-of-flight to simulate for a given object.</div>
+</div>
+<div class="col-first odd-row-color"><code>static double</code></div>
+<div class="col-second odd-row-color"><code><a href="#kVelocityEpsilon" class="member-name-link">kVelocityEpsilon</a></code></div>
+<div class="col-last odd-row-color">
 <div class="block">A constant velocity to apply when the velocity is too low to avoid the projectile getting
  stuck.</div>
 </div>
-<div class="col-first odd-row-color"><code>static double</code></div>
-<div class="col-second odd-row-color"><code><a href="#kVelocityEpsilonThreshold" class="member-name-link">kVelocityEpsilonThreshold</a></code></div>
-<div class="col-last odd-row-color">
+<div class="col-first even-row-color"><code>static double</code></div>
+<div class="col-second even-row-color"><code><a href="#kVelocityEpsilonThreshold" class="member-name-link">kVelocityEpsilonThreshold</a></code></div>
+<div class="col-last even-row-color">
 <div class="block">The threshold to apply the velocity compensation.</div>
 </div>
 </div>
@@ -187,7 +182,7 @@ loadScripts(document, 'script');</script>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#updateVisualizer(java.lang.String,java.util.List)" class="member-name-link">updateVisualizer</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;loggerKey,
  <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="data/ShooterProjectile.html" title="class in com.flarerobotics.lib.control.shooter.data">ShooterProjectile</a>&gt;&nbsp;list)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">
-<div class="block">Updates the projectile trsjectory visualizer using AdvantageScope.</div>
+<div class="block">Updates the projectile trajectory visualizer using AdvantageScope.</div>
 </div>
 </div>
 </div>
@@ -238,17 +233,8 @@ loadScripts(document, 'script');</script>
 <li>
 <section class="detail" id="kProjectileTargets">
 <h3>kProjectileTargets</h3>
-<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;edu.wpi.first.math.geometry.Pose3d&gt;</span>&nbsp;<span class="element-name">kProjectileTargets</span></div>
-<div class="block">The list of targets' poses for the projectiles. Must have the same order as
- <a href="#kProjectileTargetTolerances"><code>kProjectileTargetTolerances</code></a> and match its size.</div>
-</section>
-</li>
-<li>
-<section class="detail" id="kProjectileTargetTolerances">
-<h3>kProjectileTargetTolerances</h3>
-<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Double.html" title="class or interface in java.lang" class="external-link">Double</a>&gt;</span>&nbsp;<span class="element-name">kProjectileTargetTolerances</span></div>
-<div class="block">The list of targets' pose tolerances for the projectiles. Must have the same order as
- <a href="#kProjectileTargets"><code>kProjectileTargets</code></a> and match its size.</div>
+<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="data/ProjectileTarget.html" title="class in com.flarerobotics.lib.control.shooter.data">ProjectileTarget</a>&gt;</span>&nbsp;<span class="element-name">kProjectileTargets</span></div>
+<div class="block">The list of projectile targets to use for trajectory visualization.</div>
 </section>
 </li>
 <li>
@@ -352,7 +338,7 @@ loadScripts(document, 'script');</script>
 <h3>updateVisualizer</h3>
 <div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="data/ShooterProjectile.html" title="class in com.flarerobotics.lib.control.shooter.data">ShooterProjectile</a>&gt;</span>&nbsp;<span class="element-name">updateVisualizer</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;loggerKey,
  <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="data/ShooterProjectile.html" title="class in com.flarerobotics.lib.control.shooter.data">ShooterProjectile</a>&gt;&nbsp;list)</span></div>
-<div class="block">Updates the projectile trsjectory visualizer using AdvantageScope. Logs the values to the
+<div class="block">Updates the projectile trajectory visualizer using AdvantageScope. Logs the values to the
  given logger key. If performance intensive, move to a Notifier thread.</div>
 <dl class="notes">
 <dt>Parameters:</dt>

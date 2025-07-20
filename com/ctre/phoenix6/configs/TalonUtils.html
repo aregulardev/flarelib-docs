@@ -103,6 +103,14 @@ loadScripts(document, 'script');</script>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">
 <div class="block">Gets the current configuration of the given TalonFXS.</div>
 </div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static boolean</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#retryUntilOk(java.util.function.Supplier,int,java.lang.String)" class="member-name-link">retryUntilOk</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/function/Supplier.html" title="class or interface in java.util.function" class="external-link">Supplier</a>&lt;com.ctre.phoenix6.StatusCode&gt;&nbsp;applierFunction,
+ int&nbsp;numMaxTries,
+ <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;desc)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">
+<div class="block">Tries to apply the given function until a valid Ok status code is reached, or until the
+ maximum number of tries is exceeded.</div>
+</div>
 </div>
 </div>
 </div>
@@ -143,6 +151,26 @@ loadScripts(document, 'script');</script>
 <dd><code>fxs</code> - The TalonFXS to get the configuration from.</dd>
 <dt>Returns:</dt>
 <dd>The current configuration of the TalonFXS.</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="retryUntilOk(java.util.function.Supplier,int,java.lang.String)">
+<h3>retryUntilOk</h3>
+<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type">boolean</span>&nbsp;<span class="element-name">retryUntilOk</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/function/Supplier.html" title="class or interface in java.util.function" class="external-link">Supplier</a>&lt;com.ctre.phoenix6.StatusCode&gt;&nbsp;applierFunction,
+ int&nbsp;numMaxTries,
+ <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;desc)</span></div>
+<div class="block">Tries to apply the given function until a valid Ok status code is reached, or until the
+ maximum number of tries is exceeded. The logged values can be checked from the
+ <code>StatusCode</code> enum.</div>
+<dl class="notes">
+<dt>Parameters:</dt>
+<dd><code>applierFunction</code> - The function interacts with hardware and returns the status code.</dd>
+<dd><code>numMaxTries</code> - The maximmum number of tries before canceling.</dd>
+<dd><code>desc</code> - The description of the hardware interaction. For example:
+                        <code>"Applying the configuration to elevator motor #1"</code></dd>
+<dt>Returns:</dt>
+<dd>True if an Ok status code was reached within the given attempts, false otherwise.</dd>
 </dl>
 </section>
 </li>
